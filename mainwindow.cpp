@@ -49,10 +49,10 @@ MainWindow::MainWindow(QWidget* parent)
     logo->setGeometry(10, 10, image.width() * (800 / width()), image.height() * (480 / height()));
     logo->setPixmap(image.scaled(logo->width(), logo->height(), Qt::KeepAspectRatio));
 
-    connect(btn1, SIGNAL (released()), this, SLOT(setPenBlue()));
-    connect(btn2, SIGNAL (released()), this, SLOT(setPenRed()));
-    connect(btn3, SIGNAL (released()), this, SLOT(setPenGreen()));
-    connect(btn4, SIGNAL (released()), this, SLOT(clearScreen()));
+    connect(btn1, SIGNAL (pressed()), this, SLOT(setPenBlue()));
+    connect(btn2, SIGNAL (pressed()), this, SLOT(setPenRed()));
+    connect(btn3, SIGNAL (pressed()), this, SLOT(setPenGreen()));
+    connect(btn4, SIGNAL (pressed()), this, SLOT(clearScreen()));
 }
 
 void MainWindow::setPenBlue()
