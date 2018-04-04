@@ -1,7 +1,14 @@
-#include "mainwindow.h"
+/*
+ * Copyright (C) 2018 Microchip Technology Inc.  All rights reserved.
+ * Joshua Henderson <joshua.henderson@microchip.com>
+ */
+#include <QApplication>
+#include <QKeyEvent>
+#include <QLabel>
 #include <QPushButton>
 #include <QVBoxLayout>
-#include <QLabel>
+
+#include "mainwindow.h"
 
 MainWindow::MainWindow(QWidget* parent)
     : QMainWindow(parent)
@@ -73,6 +80,13 @@ void MainWindow::setPenGreen()
 void MainWindow::clearScreen()
 {
     m_whiteboard->clearImage();
+}
+
+void MainWindow::keyPressEvent(QKeyEvent* k)
+{
+    if(k->key() == 48){
+        QApplication::instance()->exit();
+    }
 }
 
 MainWindow::~MainWindow()

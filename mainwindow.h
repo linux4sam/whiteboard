@@ -18,8 +18,10 @@ private slots:
     void setPenGreen();
     void clearScreen();
 
-private:
+protected:
+    virtual void keyPressEvent(QKeyEvent* k) override;
 
+private:
     WhiteBoard* m_whiteboard;
 };
 
