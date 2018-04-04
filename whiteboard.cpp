@@ -1,7 +1,12 @@
-#include "whiteboard.h"
+/*
+ * Copyright (C) 2018 Microchip Technology Inc.  All rights reserved.
+ * Joshua Henderson <joshua.henderson@microchip.com>
+ */
 #include <QMouseEvent>
 #include <QPainter>
 #include <QPen>
+
+#include "whiteboard.h"
 
 WhiteBoard::WhiteBoard(QWidget* parent)
     : QWidget(parent),

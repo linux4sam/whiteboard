@@ -1,3 +1,7 @@
+/*
+ * Copyright (C) 2018 Microchip Technology Inc.  All rights reserved.
+ * Joshua Henderson <joshua.henderson@microchip.com>
+ */
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
