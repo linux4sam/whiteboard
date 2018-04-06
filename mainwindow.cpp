@@ -24,7 +24,7 @@ MainWindow::MainWindow(QWidget* parent)
     btn1->setAutoFillBackground(true);
     btn1->setPalette(pal);
     btn1->update();
-    vlay->addWidget(btn1,0,Qt::AlignRight);
+    vlay->addWidget(btn1, 0, Qt::AlignRight);
 
     QPushButton *btn2 = new QPushButton("     ");
     pal = btn2->palette();
@@ -32,7 +32,7 @@ MainWindow::MainWindow(QWidget* parent)
     btn2->setAutoFillBackground(true);
     btn2->setPalette(pal);
     btn2->update();
-    vlay->addWidget(btn2,0,Qt::AlignRight);
+    vlay->addWidget(btn2, 0, Qt::AlignRight);
 
     QPushButton *btn3 = new QPushButton("     ");
     pal = btn3->palette();
@@ -40,7 +40,7 @@ MainWindow::MainWindow(QWidget* parent)
     btn3->setAutoFillBackground(true);
     btn3->setPalette(pal);
     btn3->update();
-    vlay->addWidget(btn3,0,Qt::AlignRight);
+    vlay->addWidget(btn3, 0, Qt::AlignRight);
 
     QPushButton *btn4 = new QPushButton("Clear");
     pal = btn4->palette();
@@ -48,7 +48,7 @@ MainWindow::MainWindow(QWidget* parent)
     btn4->setAutoFillBackground(true);
     btn4->setPalette(pal);
     btn4->update();
-    vlay->addWidget(btn4,0,Qt::AlignRight);
+    vlay->addWidget(btn4, 0, Qt::AlignRight);
 
     m_whiteboard->setLayout(vlay);
     setCentralWidget(m_whiteboard);
@@ -86,7 +86,8 @@ void MainWindow::clearScreen()
 
 void MainWindow::keyPressEvent(QKeyEvent* k)
 {
-    if(k->key() == 48){
+    if (k->key() == Qt::Key_0)
+    {
         QApplication::instance()->exit();
     }
 }
