@@ -31,7 +31,7 @@ HEADERS  += mainwindow.h \
     whiteboard.h
 
 target.path = /opt/whiteboard
-target.files = whiteboard
+target.files = $$top_builddir/whiteboard
 extra.path = /opt/whiteboard
 extra.files = resources/whiteboard.sh
 configfile.path = /opt/ApplicationLauncher/applications/xml
